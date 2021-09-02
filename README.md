@@ -1,2 +1,2 @@
 # RTR-105
-Computer Studies (basic course)(English)
+E-diary of Computer Studies (basic course)(English)
