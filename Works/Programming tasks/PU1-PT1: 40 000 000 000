@@ -1,15 +1,18 @@
+
 #include <stdio.h>
-#include <stdlib.h>
 
 int main()
 {
-    double mynum1, mynum2, c;
+    long mynum1=0, mynum2=0;
     printf("Insert numbers 400000 after 100000\n");
 
-   scanf("%lf", &mynum1);
-    scanf("%lf", &mynum2);
-    c = mynum1 * mynum2;
-    printf("%.0lf", c);
+    scanf("%ld", &mynum1);
+    scanf("%ld", &mynum2);
+    
+    long c=mynum1 * mynum2;
+    
+    printf("%ld\n", c);
+    printf("%ld\n",sizeof(c));
 
     return 0;
 }
