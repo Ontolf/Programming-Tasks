@@ -1,0 +1,48 @@
+#include <stdio.h>
+int main()
+{
+    int mas[10]={0}, sw=0;
+    char cho = 0;
+    
+    printf("Enter 3 numbers:\n");
+    
+    for(int i = 0; i < 3; i++){
+      scanf("%d", &mas[i]);
+    }
+    printf("Enter y if agree to descending, n if you not agree:\n");
+    scanf(" %c", &cho);
+    if(cho == 'y'){
+      for(int n = 0;n < 2; n++){
+    
+       for(int j = 0;j < 2; j++){
+        
+         if(mas[j] > mas[j+1]){
+        
+            sw = mas[j];
+            mas[j] = mas[j+1];
+            mas[j+1] = sw;
+         }
+      
+        }   
+      }
+
+    }else if(cho == 'n'){
+     for(int n = 0;n < 2; n++){
+    
+       for(int j = 0;j < 2; j++){
+        
+         if(mas[j] < mas[j+1]){
+        
+            sw = mas[j];
+            mas[j] = mas[j+1];
+            mas[j+1] = sw;
+         }
+      
+        }   
+      }
+
+}
+    printf("%d\n%d\n%d\n", mas[0], mas[1], mas[2]);
+
+    return 0;
+}
