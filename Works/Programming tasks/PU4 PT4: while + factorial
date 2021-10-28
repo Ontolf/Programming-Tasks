@@ -2,19 +2,74 @@
 
 int main()
 {
-    int f = 0;
+    int f;
+    char choice;
     printf("Write number to get a factorial\n");
+    printf("Choose type of data c = char, i = int, l = lon long\n");
     
-    scanf("%d",&f);
+    scanf(" %c", &choice);
     
-    int count = 1, i = 1;
+    if(choice == 'i'){
+        
+        int f = 0;
+        scanf(" %d", &f);
+        
+            int count = 1, i = 1, check = 0;
     
     while(i < f){
         
         i++;
+        check = count;
         count *= i;
-        
+        if (check != count/i){
+            
+            printf("ERROR\n");
+            return 0;
+            
+        }
     }
-      printf("Your factorial is: %d\n", count);
-    return 0;
+    printf("Your factorial is: %d\n", count);
+    }else if(choice == 'c'){
+        
+        char f;
+        scanf(" %hhd", &f);
+        int count = 1, i = 1, check = 0;
+    
+         while(i < f){
+        
+        i++;
+        check = count;
+        count *= i;
+        if (check != count/i){
+            
+            printf("ERROR\n");
+            return 0;
+            
+        }
+        }
+        printf("Your factorial is: %d\n", count);
+    }else {
+        
+       long long f = 0;
+       scanf(" %lld", &f);
+                   int count = 1, i = 1, check = 0;
+    
+        while(i < f){
+        
+        i++;
+        check = count;
+        count *= i;
+        if (check != count/i){
+            
+            printf("ERROR\n");
+            return 0;
+            
+        }
+       
+        }
+        printf("Your factorial is: %d\n", count);
+    }
+
+    
+return 0;
 }
