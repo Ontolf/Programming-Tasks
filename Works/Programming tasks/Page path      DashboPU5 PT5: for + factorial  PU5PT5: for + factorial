@@ -1,0 +1,19 @@
+
+#include <stdio.h>
+
+int main()
+{
+    int f = 0;
+    printf("Write number to get a factorial\n");
+    
+    scanf("%d",&f);
+    
+    int count = 1;
+    
+    for(int i = 1; i <= f; i ++){
+        
+        count *= i;
+    }
+      printf("Your factorial is: %d\n", count);
+    return 0;
+}
