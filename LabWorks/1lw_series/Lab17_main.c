@@ -1,34 +1,55 @@
+
 #include <stdio.h>
 #include <math.h>
 
-void main(){
-double x = 0, y = 0, a = 0, S = 0, f1 = 0;
+double equation(double x){
+    double a = 0, S = 0, cnt = 0, f1 = 0, f2 = 0, f12 = 1, f22 = 1, e1 = 0, e2 = 0, e3 = 0;
 
-printf("Suggest value of x, where F(x) = arctan(x):\n");
+    a = x/ (3 * sqrt(1 + x*x));
+    S = a;
+    printf("%.2f\t%8.2f\t%8.2f\n", x, a, S);
+    
+    e1 = x/(sqrt(1 + x*x));
+    e2 = x*x/(1+x*x);
+    
+    while(cnt < 6){
+        cnt++;
+        f12 = 1;
+        f22 = 1;
+        f1 = 2 * cnt;
+        f2 = cnt;
+        for(int i = 1; i <= f1; i++){
+            f12 =  f12 * i;
+        }
+        for(int j = 1; j <= f2; j++){
+             f22 = f22 * j;
+        }
+        e3 = f12/( pow(f22,2)*pow(4,cnt)*(2*cnt+1) );
+        a = e1 *( e3 *pow(e2,cnt) );
+        S = S + a;
+        printf("%.2f\t%8.2f\t%8.2f\n", x, a, S);
+    }
+
+    return(S);
+}
+
+int main()
+{
+
+double x = 0, y = 0, yy = 0;
+
+printf("Enter value of x where f(x) = arcta(x)\n");
 scanf(" %lf", &x);
 
-y = atan (x) ;
-printf ("y = arctan (%.2f ) = %.2f\n", x, y) ;
+y = atan(x);
+printf("arcant x = %lf\n", y);
 
-f1 = x / sqrt(1 + x * x);
+yy = equation(x);
 
-a =  f1 * ( (1.) * x * x / (1.) * (1 + x * x) ) ; 
-S = a ; //S = a0 ;
-printf ("x = %.2f\t S = %8.2f\t = %8.2f\n" , x, a, atan(S)) ;
-
-a = a * ( f1 * ( (2 * 1) * x * x * x * x / ( ((2 * 2) * pow(4,2) * (2 * 2 + 1)) * pow((1 + x * x),2)) ) ) ; 
-S = S + a ; //S = S + a1 ;
-printf ("x = %.2f\t S = %8.2f\t = %8.2f\n" , x, a , atan(S)) ;
-
-a = a * ( f1 * ( (4 * 3 * 2) * x * x * x * x * x * x/ ( (pow(3 * 2,3) * pow(4,3) * (2 * 3 + 1)) * pow((1 + x * x),3)) ) ) ; 
-S = S + a ; //S = S + a2 ;
-printf ("x = %.2f\t S = %8.2f\t = %8.2f\n" , x, a , atan(S)) ;
-
-a = a * ( f1 * ( (8 * 7 * 6 * 5 * 4 * 3 * 2) * x * x * x * x * x * x * x * x/ ( (pow(4 * 3 * 2,4) * pow(4,4) * (2 * 4 + 1)) * pow((1 + x * x),4)) ) ) ; 
-S = S + a ; //S = S + a3 ;
-printf ("x = %.2f\t S = %8.2f\t = %8.2f\n" , x, a , atan(S)) ;
-
-printf ("\t                       500 \n", a);
+printf(" y = equation(%lf) = %lf\n", x, yy);
+printf(" \n");
+printf(" \n");
+printf ("\t                       500 \n");
 printf("\t                       ————————   \n");
 printf(" \t                       \\                                                    2   k            \n");
 printf(" \t            x           \\                          (2 * k)!            /   x  \\             \n");
