@@ -21,5 +21,5 @@ set yrange [-10:10]
 f(x) = x/ (3 * sqrt(1 + x*x))  
 plot atan(f(x)), atan(x)
 
-![unknown](https://user-images.githubusercontent.com/89953755/145365289-10ca8186-70e8-4022-bc32-ea521eca94e7.png)
+![unknown](https://user-images.githubusercontent.com/89953755/145365289-10ca8186-70e8-4022-bc32-ea521eca94e7.png)  
 Gnuplot's image
