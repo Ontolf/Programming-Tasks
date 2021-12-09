@@ -1,5 +1,5 @@
 Lab17.  
-Currently laboratory work which includes expression:
+Currently laboratory work which includes expression:  
 ![wqeqw](https://user-images.githubusercontent.com/89953755/145365239-8dcdd6c8-1892-4d13-b3ae-bb92a63080e0.jpg)
 
 calculates successfully within Taylor’s method by previously set commands. Program includes integrated,
