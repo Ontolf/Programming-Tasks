@@ -4,7 +4,7 @@
 int main(){
     
     float a = 0, b = 0, c =0, x = 0, fa = 0, fb = 0, fx = 0;
-    int r = 0;
+    int r = 1;
     
     printf("Enter value of left border\n" );
     scanf("%f", &a);
@@ -21,20 +21,21 @@ int main(){
     printf("from a, atan(%7.3f) = %7.3f\n", a, atan(a));
     printf("from b, atan(%7.3f) = %7.3f\n", b, atan(b));
     
-    printf("count\ta\tb\tx\tatan(x)\n");
-    while((b - a) > c){
-        
+    printf("count\ta\tb\tx\tatan(x)\tatan(c)\n");
+    x = (a + b)/2;
+    printf("%d%10.5f%10.5f%10.5f%10.5f%10.5f\n", r, a, b, x , atan(x), atan(c));
+    
+    while( ( (b - a) > 0.1 ) || ( (a - b) > 0.1 ) ){
         r++;
-        x = (a + b)/2;
-        
-        printf("%d%10.5f%10.5f%10.5f%10.5f\n", r, a, b, x , atan(x));
-        
-        if(fa*atan(x) > 0){
+         // printf("%10.5f%10.5f\n", atan(a),atan(b));
+        if(atan(x) < atan(c) ){
         a = x;
         fa = atan(x);
         } else {
         b = x;
         fb = atan(x);
         }
+        x = (a + b)/2;
+        printf("%d%10.5f%10.5f%10.5f%10.5f%10.5f\n", r, a, b, x , atan(x), atan(c));
     }
 }
