@@ -25,12 +25,12 @@ int main(){
     
     printf("count\ta\tb\tx\tatan(x)\tatan(c)\n");
     x = (a + b)/2;
-    printf("%d%10.5f%10.5f%10.5f%10.5f%10.5f\n", r, a, b, x , atan(x), atan(c));
+    printf("%d%10.5f%10.5f%10.5f%10.5f%10.5f \n", r, a, b, x , atan(x), atan(c));
     
     while( ( (b - a) > br ) || ( (a - b) > br ) ){
         r++;
          // printf("%10.5f%10.5f\n", atan(a),atan(b));
-        if(atan(x) < atan(c) ){
+        if(atan(x) < c ){
         a = x;
         fa = atan(x);
         } else {
@@ -38,6 +38,6 @@ int main(){
         fb = atan(x);
         }
         x = (a + b)/2;
-        printf("%d%10.5f%10.5f%10.5f%10.5f%10.5f\n", r, a, b, x , atan(x), atan(c));
+        printf("%d%10.5f%10.5f%10.5f%10.5f%10.5f\n", r, a, b, c , atan(x));
     }
 }
