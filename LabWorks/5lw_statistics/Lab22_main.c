@@ -118,7 +118,7 @@ void main()
     
     Modes(str, cn, c, n);
     int n3 = strlen(c);
-    printf(" Your modes is:");
+    printf(" Your modes are:");
     for( int i = 0; i < n3; i++){
         printf(" %c", c[i]);
     }
