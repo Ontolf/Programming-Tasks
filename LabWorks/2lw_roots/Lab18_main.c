@@ -3,7 +3,7 @@
 
 int main(){
     
-    float a = 0, b = 0, c =0, x = 0, fa = 0, fb = 0, fx = 0, br = 0;
+    float a = 0, b = 0, c =0, x = 0, fa = 0, fb = 0, fx = 0, prec = 0;
     int r = 1;
     
     printf("Enter value of left border\n" );
@@ -12,8 +12,8 @@ int main(){
     scanf("%f", &b);
     printf("Enter value of c wher f(x) = c\n" );
     scanf("%f", &c);
-    printf("Enter value of min borders distance \n" );
-    scanf("%f", &br);
+    printf("Enter value of precision: \n" );
+    scanf("%f", &prec);
     
     fa = atan(a); 
     fb = atan(b);
@@ -23,11 +23,11 @@ int main(){
     printf("from a, atan(%7.3f) = %7.3f\n", a, atan(a));
     printf("from b, atan(%7.3f) = %7.3f\n", b, atan(b));
     
-    printf("count\ta\tb\tx\tatan(x)\tatan(c)\n");
+    printf("count\ta\tb\tx\tatan(x)\n");
     x = (a + b)/2;
-    printf("%d%10.5f%10.5f%10.5f%10.5f%10.5f \n", r, a, b, x , atan(x), atan(c));
+    printf("%d  %10.5f%10.5f%10.5f%10.5f \n", r, a, b, x , atan(x));
     
-    while( ( (b - a) > br ) || ( (a - b) > br ) ){
+    while( ( (b - a) > prec ) || ( (a - b) > prec ) ){
         r++;
          // printf("%10.5f%10.5f\n", atan(a),atan(b));
         if(atan(x) < c ){
@@ -38,6 +38,6 @@ int main(){
         fb = atan(x);
         }
         x = (a + b)/2;
-        printf("%d%10.5f%10.5f%10.5f%10.5f%10.5f\n", r, a, b, c , atan(x));
+        printf("%d  %10.5f%10.5f%10.5f%10.5f\n", r, a, b, c , atan(x));
     }
 }
