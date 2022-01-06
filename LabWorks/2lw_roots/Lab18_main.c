@@ -18,10 +18,10 @@ int main(){
     fa = atan(a); 
     fb = atan(b);
     
-    printf(" Interval [%.2f;%.2f] where atan(x)\n", a, b);
+    printf(" Interval [%.2f;%.2f] where atan(x).\n", a, b);
         
-    printf("From a, atan(%7.3f) = %7.3f\n", a, fa);
-    printf("From b, atan(%7.3f) = %7.3f\n", b, fb);
+    printf("From a, atan(%7.3f) = %7.3f.\n", a, fa);
+    printf("From b, atan(%7.3f) = %7.3f.\n", b, fb);
     
     printf("inter\ta\tb\tx\tatan(x)\n");
     x = (a + b)/2;
@@ -29,14 +29,25 @@ int main(){
     
     while( ( (b - a) > prec ) || ( (a - b) > prec ) ){
         r++;
-         // printf("%10.5f%10.5f\n", atan(a),atan(b));
-        if(atan(x) < c ){
-        a = x;
-        fa = atan(x);
-        } else {
-        b = x;
-        fb = atan(x);
-        }
+
+         if(c >0){
+            if(atan(x) < c ){
+            a = x;
+            fa = atan(x);
+            } else {
+            b = x;
+            fb = atan(x);
+            }
+             
+         } else {
+            if(atan(x) > c ){
+            b = x;
+            fb = atan(x);
+            } else {
+            a = x;
+            fa = atan(x);   
+            }
+         }
         x = (a + b)/2;
         printf("%2d%10.5f%10.5f%10.5f%10.5f\n", r, a, b, c , atan(x));
     }
