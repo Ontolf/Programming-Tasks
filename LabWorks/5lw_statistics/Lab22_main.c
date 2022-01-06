@@ -88,7 +88,7 @@ void main()
     unsigned char max = 0, min = 255;
     int  cn[10000];
     printf(" Enter string:\n");
-    scanf(" %s", str);
+    scanf(" %[^\n]", str);
     
     printf(" Your string is: %s \n", str);
     int n = strlen(str);
