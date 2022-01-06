@@ -20,8 +20,8 @@ int main(){
     
     printf(" interval [%.2f;%.2f] where atan(x)\n", a, b);
         
-    printf("from a, atan(%7.3f) = %7.3f\n", a, atan(a));
-    printf("from b, atan(%7.3f) = %7.3f\n", b, atan(b));
+    printf("from a, atan(%7.3f) = %7.3f\n", a, fa);
+    printf("from b, atan(%7.3f) = %7.3f\n", b, fb);
     
     printf("\ta\tb\tx\tatan(x)\n");
     x = (a + b)/2;
