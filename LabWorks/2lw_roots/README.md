@@ -2,7 +2,7 @@ Lab18_roots
   
 In this program, a and b are two borders and c is the value where f(x) = c, where x between a and b.  
   
-Program finding a value of arctan(x) closest to the value of c. c is chosen by user as precision and borders.
+Program is finding a value of arctan(x) closest to the value of c. c is chosen by user as precision and borders.
   
 Example:   
   
