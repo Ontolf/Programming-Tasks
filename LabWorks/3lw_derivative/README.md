@@ -1,4 +1,6 @@
-Lab19  
+Lab19 _dervative.  
+  
+In Lab19_derivative we are searching for values of f(x) and f'(x), with using of analitical formula and forward difference.  There program output's these values.
 Inputed values:  
 a = 1  
 b = 3  
