@@ -49,7 +49,7 @@ int main(){
             }
          }
         x = (a + b)/2;
-        printf("%2d%10.5f%10.5f%10.5f%10.5f\n", r, a, b, c , atan(x));
+        printf("%2d%10.5f%10.5f%10.5f%10.5f\n", r, a, b, x , atan(x));
     }
     
 }
