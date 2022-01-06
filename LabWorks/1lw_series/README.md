@@ -7,7 +7,7 @@ unchangeable graphical ASCII interface which shows expression and recurrence fac
 calculated, after written in the code.  
 As Taylor series can be repeated multiple times, the user can
 choose the amount of cycles by adjusting the value to the variable
-rep .
+prec.  
 ![jhj](https://user-images.githubusercontent.com/89953755/145365277-adb2b1ef-3f5b-4412-a98e-020846a5ae46.jpg)  
 Output of the program where x = 2.
 
