@@ -3,10 +3,10 @@
 #include <math.h>
 
 double equation(double x){
-    double a = 0, S = 0, cnt = 0, f1 = 0, f2 = 0, f12 = 1, f22 = 1, e1 = 0, e2 = 0, e3 = 0, rep = 0;
+    double a = 0, S = 0, cnt = 0, f1 = 0, f2 = 0, f12 = 1, f22 = 1, e1 = 0, e2 = 0, e3 = 0, prec = 0;
     
     printf("Enter amount of cycles\n");
-    scanf(" %lf", &rep);
+    scanf(" %lf", &prec);
 
     a = x/ (3 * sqrt(1 + x*x));
     S = a;
@@ -15,7 +15,7 @@ double equation(double x){
     e1 = x/(sqrt(1 + x*x));
     e2 = x*x/(1+x*x);
     
-    while(cnt < rep){
+    while(cnt < prec){
         cnt++;
         f12 = 1;
         f22 = 1;
