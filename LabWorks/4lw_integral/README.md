@@ -8,5 +8,6 @@ In Lab20 program calculates value of integral with 3 different methods:
 Wolfram Alpha shows the similarity between programs output and integral.
 Example:  
   
-![Untitled](ht![Untitled](https://user-images.githubusercontent.com/89953755/148377815-7465c68d-5a42-45ed-aba7-a609c4c3ff12.png)
+
+![Untitled](https://user-images.githubusercontent.com/89953755/148378075-1244bec4-8084-43cc-b0d0-1477b7dfc751.png)
 
