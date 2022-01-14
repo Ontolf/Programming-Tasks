@@ -1,54 +1,55 @@
-
 #include <stdio.h>
 #include <math.h>
 
-double equation(double x){
-    double a = 0, S = 0, cnt = 0, f1 = 0, f2 = 0, f12 = 1, f22 = 1, e1 = 0, e2 = 0, e3 = 0, prec = 0;
+ double equation( long double x){
+    long double a = 0, a1 = 0, S = 0, eq = 0, eq2 = 0, fact1 = 2, fact2 = 1;
+    int i = 1, j = 1, k = 0;
     
-    printf("Enter amount of cycles\n");
-    scanf(" %lf", &prec);
+    eq = x / sqrt(1 + x*x);
+    eq2 = x*x/ (1 + x*x);
 
-    a = x/ (3 * sqrt(1 + x*x));
+    a = eq/3;
     S = a;
-    printf("%.2f\t%8.2f\t%8.2f\n", x, a, S);
+    printf("%2d  %Lf\t%Lf\t%Lf\n", k, x, a, S);
     
-    e1 = x/(sqrt(1 + x*x));
-    e2 = x*x/(1+x*x);
-    
-    while(cnt < prec){
-        cnt++;
-        f12 = 1;
-        f22 = 1;
-        f1 = 2 * cnt;
-        f2 = cnt;
-        for(int i = 1; i <= f1; i++){
-            f12 =  f12 * i;
+    while(k < 500){
+        k += 1;
+        // Upper part where (2 * k)!
+        for( i = 1; i <= k; i++){
+            fact1 *= i; 
         }
-        for(int j = 1; j <= f2; j++){
-             f22 = f22 * j;
+        i = 1;
+        // Lower part where (k!)^2
+        for( j = 1; j <= k; j++){
+             fact2 *= j;
         }
-        e3 = f12/( pow(f22,2)*pow(4,cnt)*(2*cnt+1) );
-        a = e1 *( e3 *pow(e2,cnt) );
-        S = S + a;
-        printf("%.2f\t%8.2f\t%8.2f\n", x, a, S);
+        j = 1;
+        fact2 = fact2 * fact2;
+        // Final calculation:
+        a1 = (fact1/( fact2 * pow(4, k) * (2 * k + 1) )) * pow(eq2, k);
+        printf("%Lf\t%Lf\t%Lf\n", a, eq, a1);
+        a = a * eq * a1;
+        S += a;
+        printf("%2d  %Lf\t%Lf\t%Lf\n", k, x, a, S);
+        fact2 = 1;
+        fact1 = 2;
     }
-
-    return(S);
+    
+    return S;
 }
 
 int main()
 {
+float x = 0, y = 0;
 
-double x = 0, y = 0, yy = 0;
-
-printf("Enter value of x where f(x) = arcta(x)\n");
-scanf(" %lf", &x);
+printf("Enter value of x where f(x) = arctan(x)\n");
+scanf(" %f", &x);
 
 y = atan(x);
-printf("arcant x = %lf\n", y);
+printf("arctan(x) = %f \n", y);
 
-yy = equation(x);
-
+equation(x);
+    
 printf(" y = equation(%lf) = %lf\n", x, yy);
 printf(" \n");
 printf(" \n");
