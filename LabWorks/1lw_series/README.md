@@ -8,7 +8,7 @@ calculated, after written in the code.
 As Taylor series can be repeated multiple times, the user can
 choose the amount of cycles by adjusting the value to the variable
 prec.  
-![jhj](https://user-images.githubusercontent.com/89953755/145365277-adb2b1ef-3f5b-4412-a98e-020846a5ae46.jpg)  
+![sfsfs](https://user-images.githubusercontent.com/89953755/149905922-107d904e-2411-4d8b-a953-169a95804bf4.png)
 Output of the program where x = 2.
 
 Gnuplot’s image:  Graphic representation of the equation was made with the
@@ -16,10 +16,14 @@ application Gnuplot. Where atan(f(x)) is purple line, atan(x) is
 green line and f(x) = x / (3 * sqrt(1 + x*x)).
 
 Code of the solution:  
-set xrange [-10:10]  
-set yrange [-10:10]   
-f(x) = x/ (3 * sqrt(1 + x*x)) - simplified where k = 0  
-plot f(x), atan(x)
+set key inside bottom right
+set xlabel 'x'
+set ylabel 'y'
+set title 'Some Data'
+S0(x) = x/sqrt(1+x*x) * 1
+S1(x)=  x/sqrt(1+x*x) * (1 +  2*x*x/((4*3)*(1+x*x)))
+plot [-20:20] atan(x), S0(x), S1(x)
 
-![unknown](https://user-images.githubusercontent.com/89953755/145365289-10ca8186-70e8-4022-bc32-ea521eca94e7.png)  
+![2121](https://user-images.githubusercontent.com/89953755/149910189-d1e0639b-3b66-42ad-a886-d84f7032c0d4.png)
+
 Gnuplot's image
