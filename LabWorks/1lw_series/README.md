@@ -8,13 +8,10 @@ calculated, after written in the code.
 As Taylor series can be repeated multiple times, the user can
 choose the amount of cycles by adjusting the value to the variable
 prec.  
-![sfsfs](https://user-images.githubusercontent.com/89953755/149905922-107d904e-2411-4d8b-a953-169a95804bf4.png)
-Output of the program where x = 2.
+![sfsfs](https://user-images.githubusercontent.com/89953755/149905922-107d904e-2411-4d8b-a953-169a95804bf4.png)  
+Output of the program where x = 100.  
 
-Gnuplot’s image:  Graphic representation of the equation was made with the
-application Gnuplot. Where atan(f(x)) is purple line, atan(x) is
-green line and f(x) = x / (3 * sqrt(1 + x*x)).
-
+Gnuplot’s image:  
 Code of the solution:  
 set key inside bottom right
 set xlabel 'x'
