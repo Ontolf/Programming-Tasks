@@ -2,12 +2,9 @@ Lab17.
 Currently laboratory work which includes expression:  
 ![wqeqw](https://user-images.githubusercontent.com/89953755/145365239-8dcdd6c8-1892-4d13-b3ae-bb92a63080e0.jpg)
 
-calculates successfully within Taylor’s method by previously set commands. Program includes integrated,
-unchangeable graphical ASCII interface which shows expression and recurrence factor. Recurrence factor was
+calculates successfully within Taylor’s method by previously set commands. Recurrence factor was
 calculated, after written in the code.  
-As Taylor series can be repeated multiple times, the user can
-choose the amount of cycles by adjusting the value to the variable
-prec.  
+  
 ![sfsfs](https://user-images.githubusercontent.com/89953755/149905922-107d904e-2411-4d8b-a953-169a95804bf4.png)  
 Output of the program where x = 100.  
 
